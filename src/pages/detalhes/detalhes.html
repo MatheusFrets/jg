@@ -1,0 +1,36 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>detalhes</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-card color="#00FFFF">
+
+    <ion-card-content>
+      <ion-card-title small color="danger">Doacões</ion-card-title>
+      
+      <img width="100%" src="{{doacao.img}}"/>
+      <p>Nome: {{doacao.nomePlanta}}</p>
+      <p>Quantidade: {{doacao.quantidade}}</p>
+      <p>Usuario: {{doacao.nomeUsuario}}</p>
+      <p>Descricao: {{doacao.descricao}}</p>
+    </ion-card-content>
+
+    <ion-row no-padding>
+      <ion-col>
+        <button ion-button clear small color="danger" icon-start (click)="mensagensPush()">
+          <ion-icon name='chatboxes'></ion-icon>
+          Mensagem
+        </button>
+      </ion-col>
+
+      <ion-col text-right>
+        <button ion-button clear small color="danger" icon-start (click)="resgatar()">
+          <ion-icon name='share-alt'></ion-icon>
+          Resgatar
+        </button>
+      </ion-col>
+    </ion-row>
+  </ion-card>
+</ion-content>

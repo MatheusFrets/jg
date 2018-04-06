@@ -1,0 +1,55 @@
+<ion-header>
+
+      <ion-navbar>
+            <ion-title>acompanhamento</ion-title>
+      </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+      <h2>Cadastro de Acompanhamento</h2>
+      <ion-list inset> 
+            <ion-item *ngFor="let planta of plantas" >
+              <h2>id: {{planta.id}}</h2>
+              <h2>Planta: {{planta.nomePlanta}}</h2>
+              <h3>Qtd: {{planta.quantidade}}</h3>
+              <h3>Usuario: {{planta.nomeUsuario}}</h3>
+            </ion-item>
+          </ion-list>
+          <button (click)="grava()" ion-button block>Grava</button>
+          <button (click)="abreCamera()" ion-button block>Camera</button>
+          <img src="{{base64Image}}">
+     <!-- <form (ngSubmit)="cadastroacompanhamentoo()">
+            <ion-list>
+                     
+                  <!--<ion-item> 
+                              <ion-label stacked>ID</ion-label>
+                              <ion-item color="dark">{{planta.id}}</ion-item>    
+                  </ion-item>
+                  <ion-item>
+                        <ion-label stacked>Foto</ion-label>
+                        <ion-input [(ngModel)]="cadastroacompanhamento.foto" type="text" name="cadastroacompanhamento.foto"></ion-input>
+                  </ion-item>
+                  <ion-item>
+                        <ion-label stacked>Latitude</ion-label> 
+                        <ion-input [(ngModel)]="cadastroacompanhamento.latitude" type="number" name="cadastroacompanhamento.latitude"></ion-input>
+                  </ion-item>
+                  <ion-item>
+
+                        <ion-label stacked>Longitude</ion-label>
+                        <ion-input [(ngModel)]="cadastroacompanhamento.longitude" type="number" name="cadastroacompanhamento.longitude"></ion-input>
+                  </ion-item>
+                  <ion-item>
+                        <ion-label stacked>Data</ion-label>
+                        <ion-datetime [(ngModel)]="cadastroacompanhamento.data_hora" name="cadastroacompanhamento.data_hora" displayFormat='DD/MM/YYYY'></ion-datetime>
+                  </ion-item>
+                  <ion-item>
+                        <ion-label stacked>Observção</ion-label>
+                        <ion-input [(ngModel)]="cadastroacompanhamento.observacao" type="text" name="cadastroacompanhamento.observacao"></ion-input>
+                  </ion-item>
+                  <button ion-button block color="danger" type="submit">Enviar</button>
+
+            </ion-list>
+      </form>-->
+</ion-content>

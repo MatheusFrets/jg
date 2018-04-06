@@ -1,0 +1,57 @@
+<ion-header>
+
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Cadastro de Usuarios</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <form (ngSubmit)="cadastro()">
+    <ion-item>
+      <ion-label stacked>Nome</ion-label>
+      <ion-input [(ngModel)]="cadastrouser.nome" name='cadastrouser.nome' type="text">matheus</ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label stacked>E-mail</ion-label>
+      <ion-input [(ngModel)]="cadastrouser.email" name='cadastrouser.email' type="email"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label stacked>Senha</ion-label>
+      <ion-input [(ngModel)]="cadastrouser.senha" name='cadastrouser.senha' type="password"></ion-input>
+    </ion-item>
+    <ion-list radio-group [(ngModel)]="cadastrouser.sexo" name="cadastrouser.sexo">
+
+      <ion-list-header>Sexo</ion-list-header>
+
+      <ion-item>
+        <ion-label>Masculino</ion-label>
+        <ion-radio value="m"></ion-radio>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Feminino</ion-label>
+        <ion-radio value="f"></ion-radio>
+      </ion-item>
+
+    </ion-list>
+
+    <ion-item>
+      <ion-label stacked>Data de Nascimento</ion-label>
+      <ion-datetime [(ngModel)]="cadastrouser.dataNascimento" name="cadastrouser.dataNascimento" displayFormat='DD/MM/YYYY'></ion-datetime>
+    </ion-item>
+
+    <ion-item>
+      <ion-label stacked>Endereco</ion-label>
+      <ion-input [(ngModel)]="cadastrouser.endereco" name='cadastrouser.endereco' type="text"></ion-input>
+    </ion-item>
+
+    <button ion-button block type="submit" color="danger">Cadastrar</button>
+  </form>
+
+
+</ion-content>

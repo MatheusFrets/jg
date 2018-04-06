@@ -1,0 +1,29 @@
+<ion-header>
+
+  <ion-navbar>
+    
+    <ion-title>Login</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  
+  
+  <img width="100%" src="assets/images/jungle.jpg"/>
+
+  <form  [formGroup]="userForm" (ngSubmit)="carrega($event); $event.preventDefault()">
+    <ion-item>
+      <ion-label stacked>E-mail</ion-label>
+      <ion-input [(ngModel)]="usuario.email" formControlName="email"  name='usuario.email' type="email"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label stacked>Senha</ion-label>
+      <ion-input [(ngModel)]="usuario.senha" name='usuario.senha' formControlName="senha" type="password"></ion-input>
+    </ion-item>
+    <button ion-button block type="submit">OK</button>
+  </form>
+  <button ion-button block (click)="pushPage()">Cadastre-se</button>
+
+</ion-content>

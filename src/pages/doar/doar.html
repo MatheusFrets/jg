@@ -1,0 +1,49 @@
+<!--
+  Generated template for the DoarPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <button ion-button menuToggle>
+          <ion-icon name="menu"></ion-icon>
+        </button>
+    <ion-title>Doar</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+ 
+     <p align='center'> <img width="100%" src="assets/images/facadoacao.jpg"></p>
+<form (ngSubmit)="enviar()"> 
+  <ion-list>
+    <ion-item>
+      <ion-label stacked>Tipo: </ion-label>
+      <ion-select [(ngModel)]="tipo" name="tipo" (ionChange)="getPlantas(tipo)">
+        <ion-option *ngFor="let t of tipos"   value="{{t.id}}">{{t.tipo}}</ion-option>
+      </ion-select>
+    </ion-item>
+    </ion-list>
+    <ion-list>
+    <ion-item>
+      <ion-label stacked>Planta: </ion-label>
+      <ion-select [(ngModel)]="doacao.planta" name="doacao.planta">
+        <ion-option *ngFor="let p of plantas"
+         value="{{p.id}}">{{ p.nome }}</ion-option>
+      </ion-select>
+    </ion-item>
+  </ion-list>
+  <button ion-button block>Nova planta</button>
+    <ion-item>
+      <ion-label stacked>Quantidade: </ion-label>
+      <ion-input [(ngModel)]="doacao.quantidade" name='doacao.quantidade' type="text"></ion-input>
+    </ion-item>
+  
+  <button ion-button block type="submit">OK</button>
+</form>
+
+</ion-content>

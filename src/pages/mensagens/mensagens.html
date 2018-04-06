@@ -1,0 +1,21 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>mensagens</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <form (ngSubmit)="enviarmensagem()">
+     
+    <ion-item>
+        <ion-label stacked>Mensagem</ion-label>
+        <ion-input [(ngModel)]="mensagem.mensagem" name='mensagem.mensagem' type="text"></ion-input>
+      </ion-item>
+    
+      <button ion-button block type="submit" color="danger">Cadastrar</button>
+  </form>
+
+</ion-content>

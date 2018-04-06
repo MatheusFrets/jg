@@ -1,0 +1,32 @@
+<ion-header>
+
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Minhas Plantas</ion-title>
+
+
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <ion-list inset>
+    <ion-card>
+      <ion-item *ngFor="let planta of plantas" (click)="seleciona(planta)">
+
+        
+          <ion-avatar item-start>
+              <img src="{{planta.img}}"/>
+            </ion-avatar>
+        <h2>Nome: {{planta.nomePlanta}}</h2>
+        <p>Usuario: {{planta.nomeUsuario}}</p>
+        <p>Tipo: {{planta.tipo}}</p>
+        <p>Qtd: {{planta.quantidade}}</p>
+
+      </ion-item>
+    </ion-card>
+  </ion-list>
+</ion-content>
